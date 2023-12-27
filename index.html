@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="number">
+    <button onclick="cal()">Click</button>
+    <p id="result"></p>
+
+    <script>
+        function cal() {
+            let number = document.getElementById('number').value;
+            let str = '';
+            let num = 0;
+            for (i = 1; i <= number; i++) {
+                str = str + i ;
+                num += i;
+                if (i == number) {
+                    str = str + "=";
+                }
+                else{
+                    str = str + '+';
+                }
+
+                document.getElementById('result').innerHTML = str  + num;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
